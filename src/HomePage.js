@@ -13,10 +13,15 @@ class Hompage extends Component {
     }
   }
 
+  //*************** Test Function ***********************************
+  //This function is linked to a button on every page during initial testing to retreive the current state and props
+
   testing(e){
     e.preventDefault()
     console.log('in homepage, finding userdata ', this.props, this.state)
   }
+
+  //*************** Test Function ***********************************
 
   addUname(e) {
     this.setState({

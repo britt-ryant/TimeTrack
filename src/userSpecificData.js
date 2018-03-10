@@ -2,7 +2,7 @@ const userSpecificData ={
   userData: [
       {
         profileId: 1,
-        Likes: [
+        likes: [
           "dogs",
           "pigs",
           "cows",
