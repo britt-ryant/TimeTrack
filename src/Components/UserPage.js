@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ShowLikes from './ShowLikes'
+import ShowHours from './ShowHours'
 
 class UserPage extends Component {
   constructor(props){
@@ -29,7 +29,8 @@ class UserPage extends Component {
     if(result){
       console.log(`in result`, result);
       this.setState({
-        likes: result.likes
+        days: result.days,
+        hours: result.hours
       })
     }
   }
@@ -38,7 +39,7 @@ class UserPage extends Component {
     return (
       <div>
         <h1>Made it to the user Page</h1>
-        {this.state.likes ? <ShowLikes likes={this.state.likes}/> : <h1>You dont have any likes</h1>}
+        {this.state.days ? <ShowHours days={this.state.days} hours={this.state.hours}/> : <h1>You dont have any likes</h1>}
         <button onClick={(e) => this.displayUserInformation(e)} value="test">Get User Data</button>
         <input onClick={(e) => this.testing(e)} type="submit" value="Test for props and state" />
       </div>
